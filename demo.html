@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface - Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .demo-container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        .logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 16px;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 32px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .features {
+            text-align: left;
+            margin: 32px 0;
+            padding: 0 20px;
+        }
+        .features h3 {
+            color: #333;
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 24px;
+        }
+        .features li:before {
+            content: "✓";
+            color: #f59e0b;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            margin: 16px;
+        }
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(245, 158, 11, 0.3);
+        }
+        .demo-links {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .demo-link {
+            color: #666;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        .demo-link:hover {
+            border-color: #f59e0b;
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="logo">🤖</div>
+        <h1>AI Chat Interface</h1>
+        <p class="subtitle">
+            A responsive web application that replicates the Claude AI chat interface with modern design and interactive features.
+        </p>
+        
+        <div class="features">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Dark theme interface matching Claude AI's aesthetic</li>
+                <li>Fully responsive design for all devices</li>
+                <li>Interactive text selection with context menus</li>
+                <li>Comprehensive AI configuration panel</li>
+                <li>Typing indicators and smooth animations</li>
+                <li>Progressive Web App capabilities</li>
+                <li>Keyboard shortcuts and accessibility features</li>
+            </ul>
+        </div>
+        
+        <a href="index.html" class="cta-button">
+            Launch Chat Interface
+        </a>
+        
+        <div class="demo-links">
+            <a href="README.md" class="demo-link">📖 Documentation</a>
+            <a href="https://github.com" class="demo-link">💻 Source Code</a>
+            <a href="#" class="demo-link" onclick="showMobileDemo()">📱 Mobile Demo</a>
+        </div>
+    </div>
+
+    <script>
+        function showMobileDemo() {
+            alert('Resize your browser window or open on mobile device to see the responsive design in action!');
+        }
+        
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.querySelector('.cta-button');
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
